@@ -12,7 +12,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 2fr 5.25fr 4.25fr 0.75fr;
 }
 
 /* SIDEBAR SECTION */
@@ -65,7 +65,7 @@ main {
     flex-direction: column;
     border-left: 1px solid rgba(59, 60, 61, 1);
     border-right: 1px solid rgba(59, 60, 61, 1);
-    width: 598px;
+    width: 620px;
     color: #71767b;
 }
 
@@ -90,7 +90,7 @@ main {
 
 .tweet-section {
     display: grid;
-    grid-template-columns: 55px 540px;
+    grid-template-columns: 55px 560px;
     padding: 16px 10px;
 }
 
@@ -110,8 +110,9 @@ main {
 
 .tweet-options {
     display: grid;
-    grid-template-columns: 55px 454px 60px;
+    grid-template-columns: 55px 484px 60px;
     padding: 10px;
+    border-bottom: 1px solid rgba(59, 60, 61, 1);
 }
 
 .post-btn {
@@ -122,4 +123,74 @@ main {
     height: 35px;
     color: #000000;
     font-weight: 700;
+}
+
+.show-posts {
+    border-bottom: 1px solid rgba(59, 60, 61, 1);
+    text-align: center;
+    color: rgba(29, 155, 240, 1);
+    padding: 12px 0;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 55px 560px ;
+    padding: 12px 0px 0px 12px;
+    border-bottom: 1px solid rgba(59, 60, 61, 1);
+}
+
+.tweet-posts {
+    max-width: 538px;
+    margin-left: -8px;
+}
+.tweet-posts p {
+    display: flex;
+    align-items: center;
+    width: 100%;
+   
+    margin-bottom: 2px;
+}
+.tweet-posts > p > svg:first-of-type {
+    margin-left: auto;
+}
+.tweet-posts > p > svg + svg {
+    margin-left: 10px;
+}
+
+.tweets {
+    color: #e7e9ea;
+    font-size: 1rem;
+}
+
+.post-options {
+    display: grid;
+    grid-template-columns: 55px 538px;
+}
+
+.post-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-icons div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.post-icons p {
+    margin: 12px 0;
+    font-size: 13px;
+}
+
+section input {
+    display: flex;
+    justify-self: center;
+    border: 1px solid rgba(59, 60, 61, 1);
+    border-radius: 20px;
+    width: 350px;
+    padding: 6px 0;
+}
+.right-column {
+    padding: 12px 0;
 }
