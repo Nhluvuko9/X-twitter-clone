@@ -72,7 +72,6 @@ aside {
     overflow-y: auto;
     position: sticky;
     top: 0;
-    bottom: 150;
 }
 
 .logo ul {
@@ -97,6 +96,20 @@ aside {
 .sidebar-nav-items ul {
     list-style: none;
 }
+
+.sidebar-nav-items li #notifications {
+    background-color: rgb(29, 155, 240);
+    border-radius: 16px;
+    width: 35px;
+    height: 15px;
+    font-size: 0.8rem;
+    display: flex;
+    position: relative;
+    z-index: 1000;
+    top: 1;
+    /* padding: -4px 7px 0px 7px; */
+}
+
 
 .post-btn button {
     border: none;
@@ -132,8 +145,8 @@ main {
     border-right: 1px solid rgba(59, 60, 61, 1);
     width: 620px;
     height: 100%;         
-    overflow-y: scroll;
-    overflow: hidden;
+    /* overflow-y: scroll;
+    overflow: hidden; */
     position: relative;
     color: #71767b;
     cursor: pointer;
@@ -218,7 +231,23 @@ main {
 }
 
 .tweet-icons svg{
+    background-color: transparent;
+}
+.tweet-icons, .icons {
     margin-right: 10px;
+    flex-shrink: 0;
+}
+.icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+.icons:hover {
+    background-color: rgba(59, 60, 61, 0.4);
+    border-radius: 50%;
+    padding: 8px;
 }
 
 .tweet-options {
@@ -289,13 +318,63 @@ main {
 }
 
 .post-icons div {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
 }
 .post-icons p {
-    margin: 12px 0;
+    margin: 12px -6px;
     font-size: 13px;
+    background-color: transparent;
+}
+.post-icons svg {
+    background-color: transparent;
+}
+
+.p-i-1:hover, .p-i-4:hover, .p-i-5:hover{
+    color: rgba(29, 155, 240, 1);
+}
+.comments svg:hover {
+    fill: rgba(29, 155, 240, 1);
+}
+.comments, .reposts, .likes {
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 8px;
+}
+.comments:hover{
+    background-color: rgba(29, 156, 240, 0.1);
+}
+
+.p-i-2:hover {
+    color: rgba(102, 161, 101, 1);
+}
+.reposts svg:hover {
+    fill: rgba(102, 161, 101, 1);
+}
+.reposts:hover {
+    background-color: rgba(82, 176, 85, 0.1)
+}
+
+.p-i-3:hover {
+    color: rgba(217, 51, 123, 1);
+}
+.likes svg:hover {
+    fill: rgba(217, 51, 123, 1);
+}
+.likes:hover {
+    background-color: rgba(217, 51, 123, 0.1);
+}
+
+.retweet {
+    border: 1px solid rgba(59, 60, 61, 1);
+    border-radius: 20px;
+    width: 540px;
+    padding: 10px;
+}
+.retweet img {
+    border-radius: 50%;
+    margin-right: 5px;
 }
 
 /* RIGHT-COLUMN/SEARCH SECTION */
@@ -309,11 +388,9 @@ main {
     box-sizing: border-box;
     overflow-y: scroll;
     overflow: hidden;
-    /* position: relative; */
     position: sticky;
     top: 0;
-    bottom: 200;
-    height: 200vh;
+    height: 100%;
 }
 
 .search {
@@ -341,7 +418,7 @@ main {
     padding: 16px;
 }
 .subscription-box button {
-    border-radius: 12px;
+    border-radius: 20px;
     border: none;
     background-color: rgba(29, 155, 240, 1);
     color: #e7e9ea;
@@ -349,6 +426,10 @@ main {
     height: 40px;
     font-weight: bold;
 }
+.subscription-box button:hover {
+    background-color: rgb(26, 132, 203, 1);
+}
+
 .right-column h5 {
     font-size: 1.30rem;
     font-weight: 700;
