@@ -67,7 +67,7 @@ aside {
 .sidebar {
     justify-self: end; 
     height: 100vh;
-    padding: 0px 8px;
+    padding: 5px 8px;
     overflow-y: auto;
     position: sticky;
     top: 0;
@@ -78,7 +78,7 @@ aside {
 }
 
 .sidebar-nav-items li {
-    padding: 12px 11px 12px 13px;
+    padding: 10px 10px 12px 13px;
 }
 .sidebar-nav-items li:hover {
     background-color: rgba(59, 60, 61, 0.4);
@@ -480,6 +480,73 @@ main {
     gap: 12px;
 }
 
+.football {
+    border: 1px solid rgba(59, 60, 61, 1);
+    border-radius: 20px;
+    padding: 16px 16px;
+    width: 350px;
+    cursor: pointer;
+    /* line-height: 20px; */
+}
+
+.football h6 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.football-match-1 {
+    display: grid;
+    grid-template-columns: 0.75fr 4fr 1.2fr;
+    width: 310px; 
+    line-height: 15px;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(59, 60, 61, 1);  
+}
+
+.match-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid rgba(59, 60, 61, 1); 
+}
+.match-info-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.football-match-2 {
+    display: grid;
+    grid-template-columns: 0.75fr 3.5fr 0.4fr 0.2fr;
+    width: 310px; 
+    line-height: 10px;
+    padding: 20px 10px 10px 20px;
+}
+.football-match-2 svg{
+    transform: rotate(180deg);
+}
+.match-day {
+    border-left: 1.5px solid rgb(40, 47, 53);
+    padding: 0 0 0 8px;
+    height: 70px;
+    width: 50px;
+    font-size: 0.85rem;
+    color: #71767b;
+}
+
+.football button {
+    color: #e7e9ea;
+    background: linear-gradient(rgba(109, 57, 143, 0.7), rgba(189, 111, 9, 0.5), rgba(214, 176, 23, 0.5));
+    width: 310px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+}
+
+
 .image-stack {
     display: flex;
     align-items: center;
@@ -546,4 +613,34 @@ footer a {
 
 .dot {
     color: #71767b;
+}
+
+/* GROK-CHATS */
+.grok-chats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 12px;
+    position: fixed;
+    bottom: 10px;
+    right: 35px;
+    z-index: 9999;
+}
+.grok {
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgba(186, 187, 188, 0.3);
+    border-radius: 15px;
+    padding: 8px;
+    background-color: transparent;
+    box-shadow: 0 0 10px 0 rgba(252, 254, 255, 0.5);
+}
+.chats {
+    width: 55px;
+    height: 55px;
+    border: 0.5px solid rgba(186, 187, 188, 0.3);
+    border-radius: 15px;
+    padding: 8px;
+    background-color: transparent;
 }
